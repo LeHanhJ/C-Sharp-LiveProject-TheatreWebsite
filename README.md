@@ -72,7 +72,7 @@ Starting from this story, all other stories that were assigned were optional. Re
 
 First off I had to create a method in the CastMember Controller to enable a file that was selected by a user and convert it into a byte array. It took me a while to fully undedrstand this task; I had to look into byte arrays, the HttpPostedFileBase class, the BinaryReader class, and how they all fit together.
 
-Below, you can see that the Upload() method takes in an HttpPostedFileBase input parameter (what image the user will be choosing) and converting it into a byte[] (byte array). It uses the BinaryReader class to convert the uploaded file into binary code, then assigned that to the byte[] *bytes*. *bytes* is defined as the content length of the binary code that has been read using the BinaryReader and the InputStream pointer. At the end of the method, we return this byte[] *bytes*.
+Below, you can see that the Upload() method takes in an HttpPostedFileBase input parameter (what image the user will be choosing) and converting it into a byte[] (byte array). It uses the BinaryReader class to convert the uploaded file into binary code, then assigned that to the byte[] `bytes`. `bytes` is defined as the content length of the binary code that has been read using the BinaryReader and the InputStream pointer. At the end of the method, we return this byte[] `bytes`.
 
 ![Upload Method in CastMember Controller](https://github.com/LeHanhJ/C-Sharp-LiveProject-TheatreWebsite/blob/main/Photos/UploadMethod.png)
 
