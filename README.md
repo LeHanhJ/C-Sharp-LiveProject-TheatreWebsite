@@ -9,7 +9,7 @@ Below you will find the story cards I was assigned to, and the code snippets I w
 
 To start, here is the overview we were given at the start of our project:
 
-![Theatre CMS Overview](TheatreCMSOverview.png)
+![Theatre CMS Overview](../Photos/StoryCards/TheatreCMSOverview.png)
 
 Our roles as developers were to collaborate on a website for a local theater/acting company, making it easy to use for users who don't have much experience with technology. As such, it is considered a content management service that is built using ASP.NET MVC and Entity Framework.
 
