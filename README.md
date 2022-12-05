@@ -72,21 +72,35 @@ Starting from this story, all other stories that were assigned were optional. Re
 
 First off I had to create a method in the CastMember Controller to enable a file that was selected by a user and convert it into a byte array. It took me a while to fully undedrstand this task; I had to look into byte arrays, the HttpPostedFileBase class, the BinaryReader class, and how they all fit together.
 
-```
-   public byte[] Upload(HttpPostedFileBase photoUpload)
-        { 
-            //this using statement makes a byte array out of what is being read from the uploaded photo's content length
-            byte[] bytes;
-            using (BinaryReader br = new BinaryReader(photoUpload.InputStream)) //InputStream points to an uploaded file to prepare for reading
-            {
-                bytes = br.ReadBytes(photoUpload.ContentLength); //byte array "bytes" reads and gets size of bytes in photoUpload
-            }
+Below, you can see that the Upload() method takes in an HttpPostedFileBase input parameter (what image the user will be choosing) and converting it into a byte[] (byte array). It uses the BinaryReader class to convert the uploaded file into binary code, then assigned that to the byte[] *bytes*. *bytes* is defined as the content length of the binary code that has been read using the BinaryReader and the InputStream pointer. At the end of the method, we return this byte[] *bytes*.
 
-            return bytes;
-        }
-```
+![Upload Method in CastMember Controller](../../../../../../../C:/Users/dell/Desktop/LiveProjects/TheatreCMS3/C-Sharp-LiveProject-TheatreWebsite/Photos/UploadMethod.png)
 
-Above, you can see that the Upload() method takes in an HttpPostedFileBase input (what image the user will be choosing) and converting it into a byte[] (byte array). It uses the BinaryReader class to convert the uploaded file into binary code, then assigned that to the byte[] *bytes*. *bytes* is defined as the content length of the binary code that has been read using the BinaryReader and the InputStream pointer. At the end of the method, we return this byte[] *bytes*.
+Next, I have to modify both the Create() and Edit() methods to take in the photoUpload parameter that we had also put in the Upload() method. This is so we are able to define it in the method and use the parameter as well as the previously defined Upload() method to save the image to the database we had first created in the first story. 
+
+![Controller Create Method Updates](../../../../../../../C:/Users/dell/Desktop/LiveProjects/TheatreCMS3/C-Sharp-LiveProject-TheatreWebsite/Photos/CreatePhotoUploadController.png)
+
+As a side note, I had uncommented the Photo attribute in the CastMember model that I had made earlier, and was told to comment out. Since we are using the Photo attribute now to save images from users, it's time to uncomment it!
+
+![CastMember Model Update](../../../../../../../C:/Users/dell/Desktop/LiveProjects/TheatreCMS3/C-Sharp-LiveProject-TheatreWebsite/Photos/CastMemberModelStory3Update.png)
+
+The next task in this story was to make sure that users were able to upload the images that they wanted to use. First I had to specify that the FormMethod of the page was POST, and because of that, I had to encode the data that forms the body of the request. We are using `multipart/form-data` due to the input type of Photo is of type "file".
+
+![Create View Photo](../../../../../../../C:/Users/dell/Desktop/LiveProjects/TheatreCMS3/C-Sharp-LiveProject-TheatreWebsite/Photos/CreateViewPhoto.png)
+
+![Create View Beginning Using Statement](../../../../../../../C:/Users/dell/Desktop/LiveProjects/TheatreCMS3/C-Sharp-LiveProject-TheatreWebsite/Photos/CreateViewEnctype.png)
+
+Finally, all I had to do for this story was to present the file that was uploaded onto the Index page. I decided to return an image whose source stemmed from the Photo that was uploaded for that particular Cast Member. 
+
+![Alt text](../../../../../../../C:/Users/dell/Desktop/LiveProjects/TheatreCMS3/C-Sharp-LiveProject-TheatreWebsite/Photos/IndexViewImage.png)
 
 
+## Reflections on the LiveProject
 
+This LiveProject was definitely my favorite project out of everything that I did in The Tech Academy as I felt like I learned the most from doing this singular project. I had to discover many things myself, and even though I needed a bit of help at some points, the entire project was very satisfying to see come to fruition. 
+
+If I had more time, there were more optional stories that I could've done, but my biggest accomplishment was when I figured out the third story with the byte[]. I remember having a really hard time with that particular story, but with a little push, I was able to figure it out myself! 
+
+## Final Thoughts
+
+I hope that this code summary gives you a deeper look into what I am capable of, and I'm always hungry to learn more! Problem solving is the best part about this line of work for me, and I hope that I can have many more epiphanines in the future!
