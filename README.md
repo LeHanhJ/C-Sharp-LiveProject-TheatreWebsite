@@ -9,7 +9,7 @@ Below you will find the story cards I was assigned to, and the code snippets I w
 
 To start, here is the overview we were given at the start of our project:
 
-![Theatre CMS Overview](../../../../../../../C:/Users/dell/Desktop/LiveProjects/TheatreCMS3/C-Sharp-LiveProject-TheatreWebsite/Photos/StoryCards/TheatreCMSOverview.png)
+![Theatre CMS Overview](TheatreCMSOverview.png)
 
 Our roles as developers were to collaborate on a website for a local theater/acting company, making it easy to use for users who don't have much experience with technology. As such, it is considered a content management service that is built using ASP.NET MVC and Entity Framework.
 
@@ -17,7 +17,7 @@ My role specifically was to work on the Cast Member list over the course of a fe
 
 ### Story 1: Create Entity Model for CastMember
 
-![Story 1: Create an Entity Framework model for CastMember, Part 1](../../../../../../../C:/Users/dell/Desktop/LiveProjects/TheatreCMS3/C-Sharp-LiveProject-TheatreWebsite/Photos/StoryCards/Card1CastMemberEM.jpg)
+![Story 1: Create an Entity Framework model for CastMember, Part 1](../C-Sharp-LiveProject-TheatreWebsite/Photos/StoryCards/Card1CastMemberEM.jpg)
 
 ![Story 1: Create an Entity Framework model for CastMember, Part 2](../../../../../../../C:/Users/dell/Desktop/LiveProjects/TheatreCMS3/C-Sharp-LiveProject-TheatreWebsite/Photos/StoryCards/Card1CastMemberEM2.jpg)
 
